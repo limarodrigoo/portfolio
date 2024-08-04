@@ -30,7 +30,6 @@ export default function TypingEffect() {
               "<br><br><br> Fell free to contact me at hello@limarodrigoo.com",
             )
             .pauseFor(12000)
-            .deleteAll()
             .start();
         }}
       />
