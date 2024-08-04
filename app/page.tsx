@@ -1,31 +1,33 @@
 "use client";
 
-import { Card, CardDescription, CardHeader } from "@components/ui/card";
+import { Card } from "@components/ui/card";
 import TypingEffect from "./typeEffect";
+import GitLogo from "@/github-logo.png";
+import EmailLogo from "@/o-email.png";
+import Image from "next/image";
+import Link from "next/link";
 
 const Home = () => {
   return (
-    <div className="grid h-dvh grid-cols-2 gap-5">
+    <div className="grid h-dvh">
       <Card className="flex flex-col justify-center">
         <TypingEffect />
-      </Card>
-      <Card className="flex flex-col justify-center">
-        <CardHeader className="text-center text-3xl">Contact me:</CardHeader>
-        <CardDescription className="flex flex-col text-center">
-          <a
+        <div className="my-10 flex justify-center">
+          <Link
             href="http://github.com/limarodrigoo"
             target="_blank"
-            className="m-2 text-xl hover:text-foreground"
+            className="m-2"
           >
-            Github
-          </a>
-          <a
+            <Image src={GitLogo} alt="github" width={50} height={50}></Image>
+          </Link>
+          <Link
             href="mailto:hello@limarodrigoo.com"
-            className="m-2 text-xl hover:text-foreground"
+            target="_blank"
+            className="m-2"
           >
-            mail: hello@limarodrigoo.com
-          </a>
-        </CardDescription>
+            <Image src={EmailLogo} alt="email" width={50} height={50}></Image>
+          </Link>
+        </div>
       </Card>
     </div>
   );

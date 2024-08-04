@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 
 export default function TypingEffect() {
   return (
-    <div className="text-center">
+    <div className="text-center text-2xl">
       <Typewriter
         // options={{ loop: true }}
         onInit={(typewriter) => {
@@ -20,16 +20,17 @@ export default function TypingEffect() {
             .typeString("<br>My main stacks are: ")
             .typeString("<br> NodeJs")
             .pauseFor(200)
-            .typeString("<br> Go,")
+            .typeString("<br> Go")
             .pauseFor(200)
-            .typeString("<br> RabbitMQ,")
+            .typeString("<br> RabbitMQ")
             .pauseFor(200)
             .typeString("<br> Redis")
+            .pauseFor(1000)
+            .deleteChars(45)
             .pauseFor(750)
             .typeString(
-              "<br><br><br> Fell free to contact me at hello@limarodrigoo.com",
+              "<br><br><br> Fell free to contact me at <a href=mailto:hello@limarodrigoo.com>hello@limarodrigoo.com</a>",
             )
-            .pauseFor(12000)
             .start();
         }}
       />
