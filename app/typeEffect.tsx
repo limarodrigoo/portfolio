@@ -26,7 +26,8 @@ export default function TypingEffect() {
             .pauseFor(200)
             .typeString("<br> Redis")
             .pauseFor(1000)
-            .deleteChars(45)
+            .deleteChars(65)
+            .typeString(".")
             .pauseFor(750)
             .typeString(
               "<br><br><br> Fell free to contact me at <a href=mailto:hello@limarodrigoo.com>hello@limarodrigoo.com</a>",
