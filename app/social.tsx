@@ -16,7 +16,7 @@ export default function Social() {
           alt="github"
           width={50}
           height={50}
-          className="bg-background"
+          className="hover:translate-x-2 hover:scale-125"
         ></Image>
       </Link>
       <Link
@@ -24,7 +24,13 @@ export default function Social() {
         target="_blank"
         className="m-2"
       >
-        <Image src={EmailLogo} alt="email" width={50} height={50}></Image>
+        <Image
+          src={EmailLogo}
+          alt="email"
+          width={50}
+          height={50}
+          className="hover:translate-x-2 hover:scale-125"
+        ></Image>
       </Link>
     </div>
   );
