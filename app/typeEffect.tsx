@@ -4,11 +4,12 @@ import Typewriter from "typewriter-effect";
 
 export default function TypingEffect() {
   return (
-    <div className="text-center text-2xl">
+    <div className="text-center font-mono text-2xl text-foreground">
       <Typewriter
-        // options={{ loop: true }}
+        options={{ loop: true }}
         onInit={(typewriter) => {
           typewriter
+            .pauseFor(500)
             .typeString("Hello, World!")
             .pauseFor(1000)
             .deleteAll()
@@ -17,21 +18,13 @@ export default function TypingEffect() {
             .deleteAll()
             .typeString("I'm a Back-end developer learning Front-end.")
             .pauseFor(1500)
-            .typeString("<br>My main stacks are: ")
-            .typeString("<br> NodeJs")
-            .pauseFor(200)
-            .typeString("<br> Go")
-            .pauseFor(200)
-            .typeString("<br> RabbitMQ")
-            .pauseFor(200)
-            .typeString("<br> Redis")
-            .pauseFor(1000)
-            .deleteChars(65)
+            .deleteChars(20)
             .typeString(".")
             .pauseFor(750)
             .typeString(
               "<br><br><br> Fell free to contact me at <a href=mailto:hello@limarodrigoo.com>hello@limarodrigoo.com</a>",
             )
+            .pauseFor(25000)
             .start();
         }}
       />

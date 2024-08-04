@@ -11,7 +11,13 @@ export default function Social() {
         target="_blank"
         className="m-2"
       >
-        <Image src={GitLogo} alt="github" width={50} height={50}></Image>
+        <Image
+          src={GitLogo}
+          alt="github"
+          width={50}
+          height={50}
+          className="bg-background"
+        ></Image>
       </Link>
       <Link
         href="mailto:hello@limarodrigoo.com"
